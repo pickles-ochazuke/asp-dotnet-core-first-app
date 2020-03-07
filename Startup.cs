@@ -27,7 +27,7 @@ namespace FirstApp
             services.AddRazorPages();
 
             services.AddDbContext<AppDbContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
+                    options.UseInMemoryDatabase(Configuration.GetConnectionString("AppDbContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
