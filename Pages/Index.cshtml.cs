@@ -16,10 +16,11 @@ namespace FirstApp.Pages
         {
             _logger = logger;
         }
-
+        
+        public string Time { get; set; }
         public void OnGet()
         {
-
+            Time = DateTime.Today.ToShortTimeString();
         }
     }
 }
